@@ -1,35 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
-
+#include "main.h"
 /**
- * str_concat - concatenate strings
- * @s1: string 1
- * @s2: string 2
- * Return: NULL if failure
+ *_strncpy - function that Copy a string
+ *@dest: The destination value
+ *@src: The source value
+ *@n: The copy limit
+ *Return: char value
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *s;
-	int a, b, c, d;
+	int i;
 
-	if (s1 == 0)
-		s1 = "";
-	if (s2 == 0)
-		s2 = "";
-	for (a = 0; s1[a] != '\0'; a++)
-		;
-	for (b = 0; s2[b] != '\0'; b++)
-		;
-	b++;
-	s = malloc(a * sizeof(*s1) + b * sizeof(*s2));
-	if (s == 0)
-		return (NULL);
-	for (c = 0, d = 0; c < a + b; c++)
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		if (c < a)
-			s[c] = s1[c];
-		else
-			s[c] = s2[d++];
+		dest[i] = src[i];
 	}
-	return (s);
+	for (; i < n; i++)
+		dest[i] = '\0';
+
+	return (dest);
 }
