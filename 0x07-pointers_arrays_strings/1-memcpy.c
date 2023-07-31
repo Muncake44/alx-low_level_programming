@@ -2,9 +2,9 @@
 
 /**
  * _memcpy - copies memory area
- * @src - original memeory area
- * @dest- new memory area
- * @n- number of bytes
+ * @dest: memory destination
+ * @src: memory source
+ * @n: number of bytes to copy
  *
  * Return: copied memory with changed n bytes
  */
